@@ -113,8 +113,8 @@ export default function ContactPage() {
           Get in Touch with Our Support Team
         </Text>
         <Text as="p" styleVariant="lead" className="mb-8 max-w-2xl mx-auto">
-          Have questions about SewaLah? Need help getting started? Our
-          friendly support team is ready to assist you.
+          Have questions about SewaLah? Need help getting started? Our friendly
+          support team is ready to assist you.
         </Text>
       </section>
 
