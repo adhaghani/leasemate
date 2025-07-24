@@ -198,7 +198,7 @@ export default function TenantPaymentMethodsPage() {
       </div>
 
       {/* Security Information */}
-      <div className="rounded-lg border text-card-foreground shadow-sm bg-yellow-50">
+      <div className="rounded-lg border bg-card text-card-foreground shadow-sm bg-yellow-50">
         <div className="p-6">
           <div className="flex items-start gap-3">
             <svg

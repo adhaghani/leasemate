@@ -1,74 +1,114 @@
+import { Text } from "@/components/ui/text";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
 export default function TenantRentalPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">My Rental</h1>
-        <p className="text-muted-foreground">
+        <Text as="h1" className="text-3xl font-bold tracking-tight">
+          My Rental
+        </Text>
+        <Text as="p" styleVariant="muted">
           View and manage your rental property information
-        </p>
+        </Text>
       </div>
 
       <div className="grid gap-6">
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h2 className="text-xl font-semibold mb-4">Property Overview</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            <div>
-              <h3 className="font-medium text-sm text-muted-foreground">
-                Address
-              </h3>
-              <p className="text-lg">123 Main Street, Apartment 2B</p>
+        <Card>
+          <CardHeader>
+            <CardTitle>Property Overview</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <Text
+                  as="h3"
+                  styleVariant="muted"
+                  className="font-medium text-sm"
+                >
+                  Address
+                </Text>
+                <Text as="p" className="text-lg">
+                  123 Main Street, Apartment 2B
+                </Text>
+              </div>
+              <div>
+                <Text
+                  as="h3"
+                  styleVariant="muted"
+                  className="font-medium text-sm"
+                >
+                  Lease Start
+                </Text>
+                <Text as="p" className="text-lg">
+                  January 1, 2024
+                </Text>
+              </div>
+              <div>
+                <Text
+                  as="h3"
+                  styleVariant="muted"
+                  className="font-medium text-sm"
+                >
+                  Lease End
+                </Text>
+                <Text as="p" className="text-lg">
+                  December 31, 2024
+                </Text>
+              </div>
+              <div>
+                <Text
+                  as="h3"
+                  styleVariant="muted"
+                  className="font-medium text-sm"
+                >
+                  Monthly Rent
+                </Text>
+                <Text as="p" className="text-lg font-semibold">
+                  $1,200
+                </Text>
+              </div>
             </div>
-            <div>
-              <h3 className="font-medium text-sm text-muted-foreground">
-                Lease Start
-              </h3>
-              <p className="text-lg">January 1, 2024</p>
-            </div>
-            <div>
-              <h3 className="font-medium text-sm text-muted-foreground">
-                Lease End
-              </h3>
-              <p className="text-lg">December 31, 2024</p>
-            </div>
-            <div>
-              <h3 className="font-medium text-sm text-muted-foreground">
-                Monthly Rent
-              </h3>
-              <p className="text-lg font-semibold">$1,200</p>
-            </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
         <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-            <h3 className="text-lg font-semibold mb-2">Lease Agreement</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              View your current lease agreement and terms
-            </p>
-            <button className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90">
-              View Lease
-            </button>
-          </div>
+          <Card>
+            <CardContent className="p-6">
+              <CardTitle className="text-lg mb-2">Lease Agreement</CardTitle>
+              <Text as="p" styleVariant="muted" className="text-sm mb-4">
+                View your current lease agreement and terms
+              </Text>
+              <Button className="w-full">View Lease</Button>
+            </CardContent>
+          </Card>
 
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-            <h3 className="text-lg font-semibold mb-2">Documents</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Access all rental-related documents
-            </p>
-            <button className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90">
-              View Documents
-            </button>
-          </div>
+          <Card>
+            <CardContent className="p-6">
+              <CardTitle className="text-lg mb-2">Documents</CardTitle>
+              <Text as="p" styleVariant="muted" className="text-sm mb-4">
+                Access all rental-related documents
+              </Text>
+              <Button className="w-full">View Documents</Button>
+            </CardContent>
+          </Card>
 
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-            <h3 className="text-lg font-semibold mb-2">Emergency Contacts</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Important contact information
-            </p>
-            <button className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90">
-              View Contacts
-            </button>
-          </div>
+          <Card>
+            <CardContent className="p-6">
+              <CardTitle className="text-lg mb-2">Emergency Contacts</CardTitle>
+              <Text as="p" styleVariant="muted" className="text-sm mb-4">
+                Important contact information
+              </Text>
+              <Button className="w-full">View Contacts</Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>

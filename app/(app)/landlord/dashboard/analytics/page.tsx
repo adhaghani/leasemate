@@ -1,25 +1,38 @@
+import { Text } from "@/components/ui/text";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+
 export default function LandlordDashboardAnalyticsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">
-          Analytics Dashboard
-        </h1>
-        <p className="text-muted-foreground">
+        <Text as="h2">Analytics Dashboard</Text>
+        <Text as="p" styleVariant="muted">
           Comprehensive insights into your property portfolio performance
-        </p>
+        </Text>
       </div>
 
       {/* Key Metrics */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-muted-foreground">
+              <Text as="p" className="text-muted-foreground">
                 Total Revenue
-              </p>
-              <p className="text-2xl font-bold">$24,500</p>
-              <p className="text-xs text-green-600">+12.5% from last month</p>
+              </Text>
+              <Text as="h4" className="text-2xl font-bold">
+                $24,500
+              </Text>
+              <Text as="p" className=" text-green-600">
+                +12.5% from last month
+              </Text>
             </div>
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
               <svg
@@ -36,11 +49,11 @@ export default function LandlordDashboardAnalyticsPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">
                 Occupancy Rate
@@ -69,11 +82,11 @@ export default function LandlordDashboardAnalyticsPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">
                 Total Properties
@@ -96,11 +109,11 @@ export default function LandlordDashboardAnalyticsPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">
                 Active Tenants
@@ -123,8 +136,8 @@ export default function LandlordDashboardAnalyticsPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Charts Section */}

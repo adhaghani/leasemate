@@ -1,14 +1,22 @@
-import { Text } from "@/components/ui/text"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
+import { Text } from "@/components/ui/text";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default function TenantDashboardQuickActionsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <Text as="h1" className="text-3xl font-bold tracking-tight">Quick Actions</Text>
+        <Text as="h1" className="text-3xl font-bold tracking-tight">
+          Quick Actions
+        </Text>
         <Text as="p" styleVariant="muted">
           Access frequently used actions and services
         </Text>
@@ -43,7 +51,10 @@ export default function TenantDashboardQuickActionsPage() {
             <Button className="bg-red-600 hover:bg-red-700">
               Emergency Maintenance
             </Button>
-            <Button variant="outline" className="border-red-300 text-red-700 hover:bg-red-100">
+            <Button
+              variant="outline"
+              className="border-red-300 text-red-700 hover:bg-red-100"
+            >
               Emergency Contact
             </Button>
           </div>
@@ -70,7 +81,9 @@ export default function TenantDashboardQuickActionsPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Pay Rent</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Pay Rent
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Make your monthly payment
               </Text>
@@ -96,7 +109,9 @@ export default function TenantDashboardQuickActionsPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Request Maintenance</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Request Maintenance
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Submit a repair request
               </Text>
@@ -122,7 +137,9 @@ export default function TenantDashboardQuickActionsPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Contact Landlord</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Contact Landlord
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Send a message
               </Text>
@@ -148,7 +165,9 @@ export default function TenantDashboardQuickActionsPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Manage Groups</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Manage Groups
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Coordinate with roommates
               </Text>
@@ -174,7 +193,9 @@ export default function TenantDashboardQuickActionsPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">View Documents</Text>
+              <Text as="h3" className="font-medium mb-2">
+                View Documents
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Access lease & documents
               </Text>
@@ -200,7 +221,9 @@ export default function TenantDashboardQuickActionsPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Get Help</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Get Help
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Support & FAQ
               </Text>
@@ -238,7 +261,9 @@ export default function TenantDashboardQuickActionsPage() {
                   </svg>
                 </div>
                 <div>
-                  <Text as="p" className="font-medium">Payment Processed</Text>
+                  <Text as="p" className="font-medium">
+                    Payment Processed
+                  </Text>
                   <Text as="p" styleVariant="muted" className="text-sm">
                     January 2025 rent - $1,200
                   </Text>
@@ -265,7 +290,9 @@ export default function TenantDashboardQuickActionsPage() {
                   </svg>
                 </div>
                 <div>
-                  <Text as="p" className="font-medium">New Message</Text>
+                  <Text as="p" className="font-medium">
+                    New Message
+                  </Text>
                   <Text as="p" styleVariant="muted" className="text-sm">
                     From property management
                   </Text>
@@ -292,7 +319,9 @@ export default function TenantDashboardQuickActionsPage() {
                   </svg>
                 </div>
                 <div>
-                  <Text as="p" className="font-medium">Maintenance Update</Text>
+                  <Text as="p" className="font-medium">
+                    Maintenance Update
+                  </Text>
                   <Text as="p" styleVariant="muted" className="text-sm">
                     Kitchen faucet repair completed
                   </Text>

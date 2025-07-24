@@ -1,14 +1,22 @@
-import { Text } from "@/components/ui/text"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
+import { Text } from "@/components/ui/text";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default function TenantGroupsMainPage() {
   return (
     <div className="space-y-6">
       <div>
-        <Text as="h1" className="text-3xl font-bold tracking-tight">Groups</Text>
+        <Text as="h1" className="text-3xl font-bold tracking-tight">
+          Groups
+        </Text>
         <Text as="p" styleVariant="muted">
           Manage shared expenses and coordinate with your roommates
         </Text>
@@ -19,32 +27,52 @@ export default function TenantGroupsMainPage() {
         <CardContent className="p-6">
           <div className="flex items-center justify-between">
             <div>
-              <Text as="h3" className="text-lg font-semibold mb-2">Your Group Status</Text>
+              <Text as="h3" className="text-lg font-semibold mb-2">
+                Your Group Status
+              </Text>
               <div className="flex items-center gap-2">
-                <Badge className="bg-green-100 text-green-700">Active Member</Badge>
+                <Badge className="bg-green-100 text-green-700">
+                  Active Member
+                </Badge>
                 <Text as="p" styleVariant="muted" className="text-sm">
                   Riverside Complex Group - Unit 2B
                 </Text>
               </div>
             </div>
             <div className="text-right">
-              <Text as="p" className="text-2xl font-bold">4</Text>
-              <Text as="p" styleVariant="muted" className="text-sm">Members</Text>
+              <Text as="p" className="text-2xl font-bold">
+                4
+              </Text>
+              <Text as="p" styleVariant="muted" className="text-sm">
+                Members
+              </Text>
             </div>
           </div>
 
           <div className="mt-4 grid gap-4 md:grid-cols-3">
             <div className="text-center">
-              <Text as="p" className="text-xl font-bold text-blue-600">$420</Text>
-              <Text as="p" styleVariant="muted" className="text-sm">Your Share</Text>
+              <Text as="p" className="text-xl font-bold text-blue-600">
+                $420
+              </Text>
+              <Text as="p" styleVariant="muted" className="text-sm">
+                Your Share
+              </Text>
             </div>
             <div className="text-center">
-              <Text as="p" className="text-xl font-bold text-green-600">Paid</Text>
-              <Text as="p" styleVariant="muted" className="text-sm">This Month</Text>
+              <Text as="p" className="text-xl font-bold text-green-600">
+                Paid
+              </Text>
+              <Text as="p" styleVariant="muted" className="text-sm">
+                This Month
+              </Text>
             </div>
             <div className="text-center">
-              <Text as="p" className="text-xl font-bold text-orange-600">$1,680</Text>
-              <Text as="p" styleVariant="muted" className="text-sm">Total Rent</Text>
+              <Text as="p" className="text-xl font-bold text-orange-600">
+                $1,680
+              </Text>
+              <Text as="p" styleVariant="muted" className="text-sm">
+                Total Rent
+              </Text>
             </div>
           </div>
         </CardContent>
@@ -70,7 +98,9 @@ export default function TenantGroupsMainPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">My Group</Text>
+              <Text as="h3" className="font-medium mb-2">
+                My Group
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 View group details
               </Text>
@@ -96,7 +126,9 @@ export default function TenantGroupsMainPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Payment Splits</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Payment Splits
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Manage shared expenses
               </Text>
@@ -122,7 +154,9 @@ export default function TenantGroupsMainPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Group Chat</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Group Chat
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Message roommates
               </Text>
@@ -148,7 +182,9 @@ export default function TenantGroupsMainPage() {
                   />
                 </svg>
               </div>
-              <Text as="h3" className="font-medium mb-2">Settings</Text>
+              <Text as="h3" className="font-medium mb-2">
+                Settings
+              </Text>
               <Text as="p" styleVariant="muted" className="text-sm">
                 Group preferences
               </Text>
@@ -183,7 +219,9 @@ export default function TenantGroupsMainPage() {
                   </svg>
                 </div>
                 <div>
-                  <Text as="p" className="font-medium">Payment received from Mike</Text>
+                  <Text as="p" className="font-medium">
+                    Payment received from Mike
+                  </Text>
                   <Text as="p" styleVariant="muted" className="text-sm">
                     $420 for January rent
                   </Text>
@@ -210,7 +248,9 @@ export default function TenantGroupsMainPage() {
                   </svg>
                 </div>
                 <div>
-                  <Text as="p" className="font-medium">New group message</Text>
+                  <Text as="p" className="font-medium">
+                    New group message
+                  </Text>
                   <Text as="p" styleVariant="muted" className="text-sm">
                     Sarah: "Utilities bill is due soon"
                   </Text>
@@ -237,7 +277,9 @@ export default function TenantGroupsMainPage() {
                   </svg>
                 </div>
                 <div>
-                  <Text as="p" className="font-medium">Expense added</Text>
+                  <Text as="p" className="font-medium">
+                    Expense added
+                  </Text>
                   <Text as="p" styleVariant="muted" className="text-sm">
                     Internet bill: $80 split 4 ways
                   </Text>
@@ -259,16 +301,28 @@ export default function TenantGroupsMainPage() {
           <CardContent>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <Text as="p" styleVariant="muted">Your Share</Text>
-                <Text as="p" className="font-medium">$420.00</Text>
+                <Text as="p" styleVariant="muted">
+                  Your Share
+                </Text>
+                <Text as="p" className="font-medium">
+                  $420.00
+                </Text>
               </div>
               <div className="flex justify-between">
-                <Text as="p" styleVariant="muted">Utilities Split</Text>
-                <Text as="p" className="font-medium">$20.00</Text>
+                <Text as="p" styleVariant="muted">
+                  Utilities Split
+                </Text>
+                <Text as="p" className="font-medium">
+                  $20.00
+                </Text>
               </div>
               <div className="flex justify-between">
-                <Text as="p" styleVariant="muted">Total Due</Text>
-                <Text as="p" className="font-bold text-lg">$440.00</Text>
+                <Text as="p" styleVariant="muted">
+                  Total Due
+                </Text>
+                <Text as="p" className="font-bold text-lg">
+                  $440.00
+                </Text>
               </div>
               <div className="pt-2">
                 <Button className="w-full">Pay Your Share</Button>

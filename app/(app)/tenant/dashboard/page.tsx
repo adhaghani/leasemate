@@ -1,76 +1,129 @@
+import { Text } from "@/components/ui/text";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
 export default function TenantDashboard() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Tenant Dashboard</h1>
-        <p className="text-muted-foreground">
+        <Text as="h1" className="text-3xl font-bold tracking-tight">
+          Tenant Dashboard
+        </Text>
+        <Text as="p" styleVariant="muted">
           Welcome to your tenant portal. Manage your rental, payments, and
           communicate with your landlord.
-        </p>
+        </Text>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h3 className="text-lg font-semibold">Rent Status</h3>
-          <p className="text-sm text-muted-foreground">Current month rent</p>
-          <p className="text-2xl font-bold text-green-600 mt-2">Paid</p>
-        </div>
+        <Card>
+          <CardContent className="p-6">
+            <Text as="h3" className="text-lg font-semibold">
+              Rent Status
+            </Text>
+            <Text as="p" styleVariant="muted" className="text-sm">
+              Current month rent
+            </Text>
+            <Text as="p" className="text-2xl font-bold text-green-600 mt-2">
+              Paid
+            </Text>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h3 className="text-lg font-semibold">Next Payment</h3>
-          <p className="text-sm text-muted-foreground">Due date</p>
-          <p className="text-2xl font-bold mt-2">Feb 1, 2025</p>
-        </div>
+        <Card>
+          <CardContent className="p-6">
+            <Text as="h3" className="text-lg font-semibold">
+              Next Payment
+            </Text>
+            <Text as="p" styleVariant="muted" className="text-sm">
+              Due date
+            </Text>
+            <Text as="p" className="text-2xl font-bold mt-2">
+              Feb 1, 2025
+            </Text>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h3 className="text-lg font-semibold">Maintenance</h3>
-          <p className="text-sm text-muted-foreground">Open requests</p>
-          <p className="text-2xl font-bold mt-2">2</p>
-        </div>
+        <Card>
+          <CardContent className="p-6">
+            <Text as="h3" className="text-lg font-semibold">
+              Maintenance
+            </Text>
+            <Text as="p" styleVariant="muted" className="text-sm">
+              Open requests
+            </Text>
+            <Text as="p" className="text-2xl font-bold mt-2">
+              2
+            </Text>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h3 className="text-lg font-semibold">Messages</h3>
-          <p className="text-sm text-muted-foreground">Unread messages</p>
-          <p className="text-2xl font-bold mt-2">1</p>
-        </div>
+        <Card>
+          <CardContent className="p-6">
+            <Text as="h3" className="text-lg font-semibold">
+              Messages
+            </Text>
+            <Text as="p" styleVariant="muted" className="text-sm">
+              Unread messages
+            </Text>
+            <Text as="p" className="text-2xl font-bold text-blue-600 mt-2">
+              1
+            </Text>
+          </CardContent>
+        </Card>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h3 className="text-lg font-semibold mb-4">Recent Activity</h3>
-          <div className="space-y-3">
-            <div className="flex items-center space-x-3">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-sm">Rent payment processed</span>
+        <Card>
+          <CardContent className="p-6">
+            <Text as="h3" className="text-lg font-semibold mb-4">
+              Recent Activity
+            </Text>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <Text as="p" className="text-sm">
+                  Rent payment processed
+                </Text>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <Text as="p" className="text-sm">
+                  Maintenance request submitted
+                </Text>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                <Text as="p" className="text-sm">
+                  Message from landlord
+                </Text>
+              </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-sm">Maintenance request submitted</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
-              <span className="text-sm">Message from landlord</span>
-            </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
-          <div className="space-y-3">
-            <button className="w-full text-left p-3 rounded-md border hover:bg-accent hover:text-accent-foreground transition-colors">
-              Submit Maintenance Request
-            </button>
-            <button className="w-full text-left p-3 rounded-md border hover:bg-accent hover:text-accent-foreground transition-colors">
-              View Payment History
-            </button>
-            <button className="w-full text-left p-3 rounded-md border hover:bg-accent hover:text-accent-foreground transition-colors">
-              Contact Landlord
-            </button>
-            <button className="w-full text-left p-3 rounded-md border hover:bg-accent hover:text-accent-foreground transition-colors">
-              Download Lease Agreement
-            </button>
-          </div>
-        </div>
+        <Card>
+          <CardContent className="p-6">
+            <Text as="h3" className="text-lg font-semibold mb-4">
+              Quick Actions
+            </Text>
+            <div className="space-y-3">
+              <Button variant="outline" className="w-full justify-start">
+                Submit Maintenance Request
+              </Button>
+              <Button variant="outline" className="w-full justify-start">
+                View Payment History
+              </Button>
+              <Button variant="outline" className="w-full justify-start">
+                Contact Landlord
+              </Button>
+              <Button variant="outline" className="w-full justify-start">
+                Download Lease Agreement
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

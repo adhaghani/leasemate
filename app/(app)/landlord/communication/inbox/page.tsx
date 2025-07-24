@@ -1,36 +1,55 @@
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Text } from "@/components/ui/text";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 export default function CommunicationInboxPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">
+          <Text as="h1" className="text-3xl font-bold tracking-tight">
             Communication Inbox
-          </h1>
-          <p className="text-muted-foreground">
+          </Text>
+          <Text as="p" styleVariant="muted">
             Manage all tenant communications and messages
-          </p>
+          </Text>
         </div>
 
         <div className="flex gap-2">
-          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-            Mark All Read
-          </button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-            New Message
-          </button>
+          <Button variant="outline">Mark All Read</Button>
+          <Button>New Message</Button>
         </div>
       </div>
 
       {/* Message Stats */}
       <div className="grid gap-4 md:grid-cols-4">
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between p-6">
             <div>
-              <p className="text-sm font-medium text-muted-foreground">
+              <Text as="p" styleVariant="muted" className="font-medium">
                 Unread Messages
-              </p>
-              <p className="text-2xl font-bold text-blue-600">12</p>
-              <p className="text-xs text-blue-600">Requires attention</p>
+              </Text>
+              <Text as="p" className="text-2xl font-bold text-blue-600">
+                12
+              </Text>
+              <Text as="p" className="text-xs text-blue-600">
+                Requires attention
+              </Text>
             </div>
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
               <svg
@@ -47,17 +66,21 @@ export default function CommunicationInboxPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between p-6">
             <div>
-              <p className="text-sm font-medium text-muted-foreground">
+              <Text as="p" styleVariant="muted" className="font-medium">
                 Open Conversations
-              </p>
-              <p className="text-2xl font-bold text-orange-600">8</p>
-              <p className="text-xs text-orange-600">Active threads</p>
+              </Text>
+              <Text as="p" className="text-2xl font-bold text-orange-600">
+                8
+              </Text>
+              <Text as="p" className="text-xs text-orange-600">
+                Active threads
+              </Text>
             </div>
             <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
               <svg
@@ -74,17 +97,21 @@ export default function CommunicationInboxPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between p-6">
             <div>
-              <p className="text-sm font-medium text-muted-foreground">
+              <Text as="p" styleVariant="muted" className="font-medium">
                 Urgent Requests
-              </p>
-              <p className="text-2xl font-bold text-red-600">3</p>
-              <p className="text-xs text-red-600">Emergency/maintenance</p>
+              </Text>
+              <Text as="p" className="text-2xl font-bold text-red-600">
+                3
+              </Text>
+              <Text as="p" className="text-xs text-red-600">
+                Emergency/maintenance
+              </Text>
             </div>
             <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
               <svg
@@ -101,17 +128,21 @@ export default function CommunicationInboxPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-          <div className="flex items-center justify-between">
+        <Card>
+          <CardContent className="flex items-center justify-between p-6">
             <div>
-              <p className="text-sm font-medium text-muted-foreground">
+              <Text as="p" styleVariant="muted" className="font-medium">
                 Avg. Response Time
-              </p>
-              <p className="text-2xl font-bold text-green-600">2.4h</p>
-              <p className="text-xs text-green-600">Last 30 days</p>
+              </Text>
+              <Text as="p" className="text-2xl font-bold text-green-600">
+                2.4h
+              </Text>
+              <Text as="p" className="text-xs text-green-600">
+                Last 30 days
+              </Text>
             </div>
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
               <svg
@@ -128,189 +159,228 @@ export default function CommunicationInboxPage() {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
         {/* Message List */}
         <div className="lg:col-span-2">
-          <div className="bg-white rounded-lg border shadow-sm">
-            <div className="p-6 border-b">
+          <Card>
+            <CardHeader>
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Messages</h3>
+                <CardTitle>Messages</CardTitle>
                 <div className="flex gap-2">
-                  <select className="px-3 py-1 border rounded-lg text-sm">
-                    <option>All Messages</option>
-                    <option>Unread Only</option>
-                    <option>Urgent</option>
-                    <option>Maintenance</option>
-                    <option>General</option>
-                  </select>
-                  <input
-                    type="text"
-                    placeholder="Search messages..."
-                    className="px-3 py-1 border rounded-lg text-sm w-48"
-                  />
+                  <Select defaultValue="all">
+                    <SelectTrigger className="w-32">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Messages</SelectItem>
+                      <SelectItem value="unread">Unread Only</SelectItem>
+                      <SelectItem value="urgent">Urgent</SelectItem>
+                      <SelectItem value="maintenance">Maintenance</SelectItem>
+                      <SelectItem value="general">General</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Input placeholder="Search messages..." className="w-48" />
                 </div>
               </div>
-            </div>
+            </CardHeader>
 
-            <div className="divide-y max-h-96 overflow-y-auto">
-              {/* Message 1 - Urgent */}
-              <div className="p-4 hover:bg-gray-50 cursor-pointer border-l-4 border-red-500">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                      <span className="text-red-600 font-semibold text-sm">
-                        SJ
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-medium">Sarah Johnson - Apt 2A</h4>
-                        <span className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">
-                          URGENT
-                        </span>
+            <CardContent className="p-0">
+              <div className="divide-y max-h-96 overflow-y-auto">
+                {/* Message 1 - Urgent */}
+                <div className="p-4 hover:bg-accent cursor-pointer border-l-4 border-red-500">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                        <Text
+                          as="p"
+                          className="text-red-600 font-semibold text-sm"
+                        >
+                          SJ
+                        </Text>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Sunset Apartments
-                      </p>
-                      <p className="text-sm mt-1">
-                        Water leak in bathroom - need immediate assistance!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground">15 min ago</p>
-                    <div className="w-3 h-3 bg-blue-600 rounded-full mt-1"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Message 2 - Maintenance */}
-              <div className="p-4 hover:bg-gray-50 cursor-pointer border-l-4 border-orange-500">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                      <span className="text-orange-600 font-semibold text-sm">
-                        MR
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-medium">Mike Rodriguez - Apt 1B</h4>
-                        <span className="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">
-                          MAINTENANCE
-                        </span>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <Text as="h4" className="font-medium">
+                            Sarah Johnson - Apt 2A
+                          </Text>
+                          <Badge
+                            variant="destructive"
+                            className="bg-red-100 text-red-700 border-red-200"
+                          >
+                            URGENT
+                          </Badge>
+                        </div>
+                        <Text as="p" styleVariant="muted">
+                          Sunset Apartments
+                        </Text>
+                        <Text as="p" className="text-sm mt-1">
+                          Water leak in bathroom - need immediate assistance!
+                        </Text>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Downtown Condos
-                      </p>
-                      <p className="text-sm mt-1">
-                        AC unit making strange noises, could you send someone to
-                        check?
-                      </p>
                     </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground">2 hours ago</p>
-                    <div className="w-3 h-3 bg-blue-600 rounded-full mt-1"></div>
+                    <div className="text-right">
+                      <Text as="p" className="text-xs text-muted-foreground">
+                        15 min ago
+                      </Text>
+                      <div className="w-3 h-3 bg-blue-600 rounded-full mt-1"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Message 3 - General */}
-              <div className="p-4 hover:bg-gray-50 cursor-pointer">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600 font-semibold text-sm">
-                        EP
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-medium">
-                          Emily Parker - Group Leader
-                        </h4>
-                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">
-                          GROUP
-                        </span>
+                {/* Message 2 - Maintenance */}
+                <div className="p-4 hover:bg-accent cursor-pointer border-l-4 border-orange-500">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                        <Text
+                          as="p"
+                          className="text-orange-600 font-semibold text-sm"
+                        >
+                          MR
+                        </Text>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Riverside Complex - Unit 3C
-                      </p>
-                      <p className="text-sm mt-1">
-                        Hi! Our group would like to schedule a walkthrough for
-                        lease renewal...
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground">4 hours ago</p>
-                    <div className="w-3 h-3 bg-blue-600 rounded-full mt-1"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Message 4 - Payment */}
-              <div className="p-4 hover:bg-gray-50 cursor-pointer">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                      <span className="text-green-600 font-semibold text-sm">
-                        AL
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-medium">Alex Liu - Apt 1A</h4>
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">
-                          PAYMENT
-                        </span>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <Text as="h4" className="font-medium">
+                            Mike Rodriguez - Apt 1B
+                          </Text>
+                          <Badge className="bg-orange-100 text-orange-700 border-orange-200">
+                            MAINTENANCE
+                          </Badge>
+                        </div>
+                        <Text as="p" styleVariant="muted">
+                          Downtown Condos
+                        </Text>
+                        <Text as="p" className="text-sm mt-1">
+                          AC unit making strange noises, could you send someone
+                          to check?
+                        </Text>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Sunset Apartments
-                      </p>
-                      <p className="text-sm mt-1">
-                        Payment confirmation for December rent. Thank you!
-                      </p>
+                    </div>
+                    <div className="text-right">
+                      <Text as="p" className="text-xs text-muted-foreground">
+                        2 hours ago
+                      </Text>
+                      <div className="w-3 h-3 bg-blue-600 rounded-full mt-1"></div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground">1 day ago</p>
-                  </div>
                 </div>
-              </div>
 
-              {/* Message 5 - Read */}
-              <div className="p-4 hover:bg-gray-50 cursor-pointer opacity-60">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                      <span className="text-gray-600 font-semibold text-sm">
-                        DB
-                      </span>
+                {/* Message 3 - General */}
+                <div className="p-4 hover:bg-accent cursor-pointer">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <Text
+                          as="p"
+                          className="text-blue-600 font-semibold text-sm"
+                        >
+                          EP
+                        </Text>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <Text as="h4" className="font-medium">
+                            Emily Parker - Group Leader
+                          </Text>
+                          <Badge className="bg-green-100 text-green-700 border-green-200">
+                            GROUP
+                          </Badge>
+                        </div>
+                        <Text as="p" styleVariant="muted">
+                          Riverside Complex - Unit 3C
+                        </Text>
+                        <Text as="p" className="text-sm mt-1">
+                          Hi! Our group would like to schedule a walkthrough for
+                          lease renewal...
+                        </Text>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-medium">David Brown - Apt 2C</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Downtown Condos
-                      </p>
-                      <p className="text-sm mt-1">
-                        Thanks for the quick response on the maintenance
-                        request.
-                      </p>
+                    <div className="text-right">
+                      <Text as="p" className="text-xs text-muted-foreground">
+                        4 hours ago
+                      </Text>
+                      <div className="w-3 h-3 bg-blue-600 rounded-full mt-1"></div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground">2 days ago</p>
+                </div>
+
+                {/* Message 4 - Payment */}
+                <div className="p-4 hover:bg-accent cursor-pointer">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                        <Text
+                          as="p"
+                          className="text-green-600 font-semibold text-sm"
+                        >
+                          AL
+                        </Text>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <Text as="h4" className="font-medium">
+                            Alex Liu - Apt 1A
+                          </Text>
+                          <Badge className="bg-purple-100 text-purple-700 border-purple-200">
+                            PAYMENT
+                          </Badge>
+                        </div>
+                        <Text as="p" styleVariant="muted">
+                          Sunset Apartments
+                        </Text>
+                        <Text as="p" className="text-sm mt-1">
+                          Payment confirmation for December rent. Thank you!
+                        </Text>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <Text as="p" className="text-xs text-muted-foreground">
+                        1 day ago
+                      </Text>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Message 5 - Read */}
+                <div className="p-4 hover:bg-accent cursor-pointer opacity-60">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                        <Text
+                          as="p"
+                          className="text-gray-600 font-semibold text-sm"
+                        >
+                          DB
+                        </Text>
+                      </div>
+                      <div className="flex-1">
+                        <Text as="h4" className="font-medium">
+                          David Brown - Apt 2C
+                        </Text>
+                        <Text as="p" styleVariant="muted">
+                          Downtown Condos
+                        </Text>
+                        <Text as="p" className="text-sm mt-1">
+                          Thanks for the quick response on the maintenance
+                          request.
+                        </Text>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <Text as="p" className="text-xs text-muted-foreground">
+                        2 days ago
+                      </Text>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Message Composition & Quick Actions */}
@@ -469,43 +539,63 @@ export default function CommunicationInboxPage() {
               </div>
 
               <div>
-                <label className="text-sm font-medium mb-2 block">
+                <Text as="p" className="text-sm font-medium mb-2">
                   Property
-                </label>
-                <select className="w-full px-3 py-2 border rounded-lg">
-                  <option>All Properties</option>
-                  <option>Sunset Apartments</option>
-                  <option>Downtown Condos</option>
-                  <option>Riverside Complex</option>
-                </select>
+                </Text>
+                <Select defaultValue="all">
+                  <SelectTrigger className="w-full">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Properties</SelectItem>
+                    <SelectItem value="sunset">Sunset Apartments</SelectItem>
+                    <SelectItem value="downtown">Downtown Condos</SelectItem>
+                    <SelectItem value="riverside">Riverside Complex</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
           </div>
 
           {/* Response Templates */}
-          <div className="bg-white rounded-lg border shadow-sm">
-            <div className="p-6 border-b">
-              <h3 className="text-lg font-semibold">Quick Templates</h3>
-            </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Quick Templates</CardTitle>
+            </CardHeader>
 
-            <div className="p-6 space-y-2">
-              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-sm">
+            <CardContent className="space-y-2">
+              <Button
+                variant="ghost"
+                className="w-full justify-start text-sm h-auto py-2"
+              >
                 Maintenance Request Received
-              </button>
-              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-sm">
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start text-sm h-auto py-2"
+              >
                 Payment Reminder
-              </button>
-              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-sm">
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start text-sm h-auto py-2"
+              >
                 Lease Renewal Notice
-              </button>
-              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-sm">
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start text-sm h-auto py-2"
+              >
                 Property Inspection Notice
-              </button>
-              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-sm">
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start text-sm h-auto py-2"
+              >
                 Emergency Response
-              </button>
-            </div>
-          </div>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
