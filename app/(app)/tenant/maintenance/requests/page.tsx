@@ -1,44 +1,64 @@
+import { Text } from "@/components/ui/text";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 export default function TenantMaintenanceRequestsPage() {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">My Requests</h1>
-          <p className="text-muted-foreground">
+          <Text as="h2">My Requests</Text>
+          <Text as="p" styleVariant="muted">
             Track your maintenance requests and their status
-          </p>
+          </Text>
         </div>
-        <a
-          href="/tenant/maintenance/submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-        >
-          New Request
-        </a>
+        <Button>New Request</Button>
       </div>
 
       {/* Filters */}
       <div className="flex gap-4 items-center">
-        <select className="px-3 py-2 border rounded-lg">
-          <option value="all">All Requests</option>
-          <option value="open">Open</option>
-          <option value="in-progress">In Progress</option>
-          <option value="completed">Completed</option>
-          <option value="cancelled">Cancelled</option>
-        </select>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="All Requests" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Requests</SelectItem>
+            <SelectItem value="open">Open</SelectItem>
+            <SelectItem value="in-progress">In Progress</SelectItem>
+            <SelectItem value="completed">Completed</SelectItem>
+            <SelectItem value="cancelled">Cancelled</SelectItem>
+          </SelectContent>
+        </Select>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="All Categories" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Categories</SelectItem>
+            <SelectItem value="plumbing">Plumbing</SelectItem>
+            <SelectItem value="electrical">Electrical</SelectItem>
+            <SelectItem value="hvac">Heating/Cooling</SelectItem>
+            <SelectItem value="appliances">Appliances</SelectItem>
+          </SelectContent>
+        </Select>
 
-        <select className="px-3 py-2 border rounded-lg">
-          <option value="all">All Categories</option>
-          <option value="plumbing">Plumbing</option>
-          <option value="electrical">Electrical</option>
-          <option value="hvac">Heating/Cooling</option>
-          <option value="appliances">Appliances</option>
-        </select>
-
-        <select className="px-3 py-2 border rounded-lg">
-          <option value="newest">Newest First</option>
-          <option value="oldest">Oldest First</option>
-          <option value="priority">By Priority</option>
-        </select>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="Sort By" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="newest">Newest First</SelectItem>
+            <SelectItem value="oldest">Oldest First</SelectItem>
+            <SelectItem value="priority">By Priority</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       {/* Active Requests */}
@@ -174,7 +194,7 @@ export default function TenantMaintenanceRequestsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div>w
 
       {/* Request Statistics */}
       <div className="grid gap-4 md:grid-cols-4">

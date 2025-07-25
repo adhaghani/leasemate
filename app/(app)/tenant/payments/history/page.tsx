@@ -1,3 +1,14 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Text } from "@/components/ui/text";
+import { Check, AlertCircle } from "lucide-react";
+
 export default function TenantPaymentHistoryPage() {
   return (
     <div className="space-y-6">
@@ -8,29 +19,16 @@ export default function TenantPaymentHistoryPage() {
         </p>
       </div>
 
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-        <div className="p-6 border-b">
-          <h2 className="text-xl font-semibold">Recent Payments</h2>
-        </div>
-
-        <div className="p-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Recent Payments</CardTitle>
+        </CardHeader>
+        <CardContent>
           <div className="space-y-4">
             <div className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+                  <Check className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h3 className="font-medium">December 2024 Rent</h3>
@@ -50,19 +48,7 @@ export default function TenantPaymentHistoryPage() {
             <div className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+                  <Check className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h3 className="font-medium">November 2024 Rent</h3>
@@ -82,19 +68,7 @@ export default function TenantPaymentHistoryPage() {
             <div className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+                  <Check className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h3 className="font-medium">October 2024 Rent</h3>
@@ -114,19 +88,7 @@ export default function TenantPaymentHistoryPage() {
             <div className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-yellow-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <AlertCircle className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
                   <h3 className="font-medium">September 2024 Rent</h3>
@@ -149,8 +111,8 @@ export default function TenantPaymentHistoryPage() {
               Load More Payments
             </button>
           </div>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
 
       <div className="grid gap-6 md:grid-cols-3">
         <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">

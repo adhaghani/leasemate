@@ -81,8 +81,10 @@ export default function TenantRentalPage() {
 
         <div className="grid gap-6 md:grid-cols-3">
           <Card>
-            <CardContent className="p-6">
-              <CardTitle className="text-lg mb-2">Lease Agreement</CardTitle>
+            <CardHeader>
+              <CardTitle>Lease Agreement</CardTitle>
+            </CardHeader>
+            <CardContent>
               <Text as="p" styleVariant="muted" className="text-sm mb-4">
                 View your current lease agreement and terms
               </Text>
@@ -91,8 +93,10 @@ export default function TenantRentalPage() {
           </Card>
 
           <Card>
-            <CardContent className="p-6">
-              <CardTitle className="text-lg mb-2">Documents</CardTitle>
+            <CardHeader>
+              <CardTitle>Documents</CardTitle>
+            </CardHeader>
+            <CardContent>
               <Text as="p" styleVariant="muted" className="text-sm mb-4">
                 Access all rental-related documents
               </Text>
@@ -101,8 +105,10 @@ export default function TenantRentalPage() {
           </Card>
 
           <Card>
-            <CardContent className="p-6">
-              <CardTitle className="text-lg mb-2">Emergency Contacts</CardTitle>
+            <CardHeader>
+              <CardTitle>Emergency Contact</CardTitle>
+            </CardHeader>
+            <CardContent>   
               <Text as="p" styleVariant="muted" className="text-sm mb-4">
                 Important contact information
               </Text>
